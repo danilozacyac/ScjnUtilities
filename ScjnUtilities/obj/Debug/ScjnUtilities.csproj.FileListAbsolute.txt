@@ -1,0 +1,5 @@
+c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\bin\Debug\ScjnUtilities.dll
+c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\bin\Debug\ScjnUtilities.pdb
+c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.csprojResolveAssemblyReference.cache
+c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.dll
+c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.pdb
