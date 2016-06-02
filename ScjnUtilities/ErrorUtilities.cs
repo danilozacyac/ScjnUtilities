@@ -67,6 +67,17 @@ namespace ScjnUtilities
         }
 
         /// <summary>
+        /// Muestra los errores de validación de los atributos de los objetos
+        /// </summary>
+        /// <param name="sTitle">Título del error</param>
+        /// <param name="sMsj">Errores de validación</param>
+        public static void MostrarMensajes(string sTitle, string sMsj)
+        {
+            MessageBox.Show(sMsj, sTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+
+        /// <summary>
         /// Genera una entrada en el visor de documentos del SO con los datos de la excepcion
         /// </summary>
         /// <param name="ex"></param>
