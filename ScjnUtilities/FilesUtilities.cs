@@ -78,5 +78,28 @@ namespace ScjnUtilities
             return dialog.FileName;
         }
 
+        public static bool IsFileLocked(string fileName)
+        {
+            FileStream stream = null;
+
+            FileInfo file = new FileInfo(fileName);
+
+            try
+            {
+                stream = file.Open(FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+            }
+            catch (IOException)
+            {
+                //El archivo esta bloqueado
+                return true;
+            }
+            finally
+            {
+                if (stream != null)
+                    stream.Close();
+            }
+            return false;
+        }
+
     }
 }
