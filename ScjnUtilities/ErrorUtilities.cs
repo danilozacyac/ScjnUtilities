@@ -25,7 +25,7 @@ namespace ScjnUtilities
                 file.WriteLine(" ");
                 file.WriteLine(" ");
                 file.WriteLine(" ");
-                file.WriteLine("*********************" + DateTime.Now.ToString() + "***************************");
+                file.WriteLine(String.Format("*********************{0}***************************", DateTime.Now));
                 file.WriteLine("Equipo:  " + Environment.MachineName);
                 file.WriteLine("Usuario:   " + Environment.UserName);
                 file.WriteLine("Método:    " + methodName);
@@ -45,7 +45,7 @@ namespace ScjnUtilities
         /// <param name="appName">Nombre de la aplicación que genera el error</param>
         public static void SetNewErrorMessage(Exception ex, String methodInfo, String appName)
         {
-            MessageBox.Show("Error ({0}) : {1}" + ex.Source + ex.Message, methodInfo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(String.Format("Error ({0}) : {1}{0}{1}", ex.Source, ex.Message), methodInfo, MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             String errorFilePath = ConfigurationManager.AppSettings.Get("RutaTxtErrorFile");
 
@@ -54,7 +54,7 @@ namespace ScjnUtilities
                 file.WriteLine(" ");
                 file.WriteLine(" ");
                 file.WriteLine(" ");
-                file.WriteLine("*********************" + DateTime.Now.ToString() + "***************************");
+                file.WriteLine(String.Format("*********************{0}***************************", DateTime.Now));
                 file.WriteLine("Equipo:  " + Environment.MachineName);
                 file.WriteLine("Usuario:   " + Environment.UserName);
                 file.WriteLine("Método:    " + methodInfo);
@@ -90,9 +90,8 @@ namespace ScjnUtilities
                 {
                     EventLog.CreateEventSource(appName, appName);
                 }
-                EventLog logg = new EventLog(appName);
-                logg.Source = appName;
-                String mensaje = methodExc + "\n" + ex.Message + ex.StackTrace;
+                EventLog logg = new EventLog(appName) { Source = appName };
+                String mensaje = String.Format("{0}\n{1}{2}", methodExc, ex.Message, ex.StackTrace);
                 logg.WriteEntry(mensaje);
                 logg.Close();
             }

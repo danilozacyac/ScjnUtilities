@@ -45,6 +45,7 @@
     <Compile Include="DataBaseUtilities.cs" />
     <Compile Include="DateTimeUtilities.cs" />
     <Compile Include="ErrorUtilities.cs" />
+    <Compile Include="Extensiones.cs" />
     <Compile Include="FilesUtilities.cs" />
     <Compile Include="NumericUtilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

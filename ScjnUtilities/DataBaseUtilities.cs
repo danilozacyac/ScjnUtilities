@@ -26,7 +26,7 @@ namespace ScjnUtilities
             {
                 connection.Open();
 
-                string sqlCadena = "SELECT MAX(" + nombreCampo + ") + 1 AS Id FROM " + nombreTabla;
+                string sqlCadena = String.Format("SELECT MAX({0}) + 1 AS Id FROM {1}", nombreCampo, nombreTabla);
 
                 cmd = new OleDbCommand(sqlCadena, connection);
                 reader = cmd.ExecuteReader();
@@ -68,7 +68,7 @@ namespace ScjnUtilities
             {
                 connection.Open();
 
-                string sqlCadena = "SELECT MAX(" + nombreCampo + ") + 1 AS Id FROM " + nombreTabla;
+                string sqlCadena = String.Format("SELECT MAX({0}) + 1 AS Id FROM {1}", nombreCampo, nombreTabla);
 
                 cmd = new SqlCommand(sqlCadena, connection);
                 reader = cmd.ExecuteReader();
@@ -118,7 +118,7 @@ namespace ScjnUtilities
             {
                 connection.Open();
 
-                string sqlCadena = "SELECT MAX(" + nombreCampo + ") + " + incremento + " AS Id FROM " + nombreTabla;
+                string sqlCadena = String.Format("SELECT MAX({0}) + {1} AS Id FROM {2}", nombreCampo, incremento, nombreTabla);
 
                 cmd = new OleDbCommand(sqlCadena, connection);
                 reader = cmd.ExecuteReader();
@@ -168,7 +168,7 @@ namespace ScjnUtilities
             {
                 connection.Open();
 
-                string sqlCadena = "SELECT MAX(" + nombreCampo + ") + " + incremento + " AS Id FROM " + nombreTabla;
+                string sqlCadena = String.Format("SELECT MAX({0}) + {1} AS Id FROM {2}", nombreCampo, incremento, nombreTabla);
 
                 cmd = new SqlCommand(sqlCadena, connection);
                 reader = cmd.ExecuteReader();

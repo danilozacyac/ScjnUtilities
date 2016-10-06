@@ -134,15 +134,12 @@ namespace ScjnUtilities
         public static string CambiaLtr123(string cLineaPr, string cCarOld, string cCarNvo)
         {
             string cLinea = cLineaPr;
-            string cLin;
+            string cLin = String.Empty;
             string cLineaTmp;
-            int nPos, nAct;
+            int nPos;
             int nLengthLinea;
-            int nLengthCarOld;
-
-            nLengthCarOld = cCarOld.Length;
-            nAct = 1;
-            cLin = "";
+            int nLengthCarOld = cCarOld.Length;
+            const int nAct = 1;
             nPos = cLinea.IndexOf(cCarOld, nAct);
 
             while (nPos > 0)
@@ -494,7 +491,7 @@ namespace ScjnUtilities
                     /// si son iguales en posiciones equidistantes el peso es 0
                     /// de lo contrario el peso suma a uno.
                     costo = (s[i - 1] == t[j - 1]) ? 0 : 1;
-                    d[i, j] = System.Math.Min(System.Math.Min(d[i - 1, j] + 1,  //Eliminacion
+                    d[i, j] = Math.Min(Math.Min(d[i - 1, j] + 1,  //Eliminacion
                                   d[i, j - 1] + 1),                             //Inserccion 
                                   d[i - 1, j - 1] + costo);                     //Sustitucion
                 }

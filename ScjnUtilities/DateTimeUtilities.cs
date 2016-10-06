@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Common;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace ScjnUtilities
 {
@@ -85,7 +82,7 @@ namespace ScjnUtilities
         /// <returns></returns>
         public static string ToLongDateFormat(DateTime? fecha)
         {
-            return fecha.Value.Day + " de " + DateTimeUtilities.ToMonthName(fecha.Value.Month) + " de " + fecha.Value.Year;
+            return String.Format("{0} de {1} de {2}", fecha.Value.Day, DateTimeUtilities.ToMonthName(fecha.Value.Month), fecha.Value.Year);
         }
 
         /// <summary>
@@ -101,7 +98,7 @@ namespace ScjnUtilities
                 textDate = textDate.Replace('\r', ' ');
                 string[] date = textDate.Split('&');
 
-                string newDate = date[0].Trim() + "/" + DateTimeUtilities.GetMonthNumberByName(date[1].Trim()) + "/" + date[2].Trim();
+                string newDate = String.Format("{0}/{1}/{2}", date[0].Trim(), DateTimeUtilities.GetMonthNumberByName(date[1].Trim()), date[2].Trim());
 
                 return Convert.ToDateTime(newDate);
             }
