@@ -3,3 +3,8 @@ c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilitie
 c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.csprojResolveAssemblyReference.cache
 c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.dll
 c:\users\lavega\documents\visual studio 2013\Projects\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.pdb
+C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\bin\Debug\ScjnUtilities.dll
+C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\bin\Debug\ScjnUtilities.pdb
+C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.csprojResolveAssemblyReference.cache
+C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.dll
+C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.pdb

@@ -85,6 +85,18 @@ namespace ScjnUtilities
             return String.Format("{0} de {1} de {2}", fecha.Value.Day, DateTimeUtilities.ToMonthName(fecha.Value.Month), fecha.Value.Year);
         }
 
+
+        /// <summary>
+        /// Devuelve la fecha en formato dd?MMM?yyyy donde ? es el spliter
+        /// </summary>
+        /// <param name="fecha"></param>
+        /// <param name="spliter">Caracter designado para separar los valores</param>
+        /// <returns></returns>
+        public static string ToAbrevMonthFormat(DateTime? fecha, char spliter)
+        {
+            return String.Format("{0}{1}{2}{1}{3}", fecha.Value.Day, spliter, DateTimeUtilities.ToShortMonthName(fecha.Value.Month), fecha.Value.Year);
+        }
+
         /// <summary>
         /// Devuelve la fecha en formato corto dd/MM/yyyy
         /// </summary>
