@@ -504,5 +504,9 @@ namespace ScjnUtilities
                 porcentaje = ((double)d[m, n] / (double)t.Length);
             return d[m, n];
         }
+
+
+
+        
     }
 }

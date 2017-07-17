@@ -91,5 +91,35 @@ namespace ScjnUtilities
             return NoPermitidos.Contains(texto);
         }
 
+
+       
+        /// <summary>
+        /// Verifica si la cadena ingresada corresponde a la máscara de un RFC sin importar
+        /// si se trata de personas físicas o morales. No se valida que el RFC exista, tan
+        /// solo que el formato sea correcto
+        /// </summary>
+        /// <param name="rfc"></param>
+        /// <returns></returns>
+        public static bool IsValidRfc(string rfc)
+        {
+            Regex regex = new Regex(@"^([A-ZÑ&]{3,4}) ?(?:- ?)?(\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])) ?(?:- ?)?([A-Z\d]{2})([A\d])$");
+            return regex.IsMatch(rfc);
+        }
+
+        /// <summary>
+        /// Verifica si la cadena ingresada corresponde a la máscara de una CURP sin importar
+        /// si se trata de personas físicas o morales. No se valida que el CURP exista, tan
+        /// solo que el formato sea correcto
+        /// </summary>
+        /// <param name="curp"></param>
+        /// <returns></returns>
+        public static bool IsValidCurp(string curp)
+        {
+            Regex regex = new Regex(@"[A-Z]{4}\d{6}[HM][A-Z]{2}[B-DF-HJ-NP-TV-Z]{3}[A-Z0-9][0-9]");
+            return regex.IsMatch(curp);
+        }
+       
+
+
     }
 }
