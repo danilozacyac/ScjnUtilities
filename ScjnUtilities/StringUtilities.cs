@@ -457,6 +457,28 @@ namespace ScjnUtilities
 
         }
 
+        public static string ReplaceSaltoDeLinea(string cCadena)
+        {
+            string cChr = "";
+            string sCadena = cCadena;
+
+            cChr = Convert.ToChar(92).ToString();
+            sCadena = CambiaLtr123(sCadena, cChr, "");
+            sCadena = CambiaLtr123(sCadena, "'", "");
+
+            cChr = Convert.ToChar(34).ToString();
+            sCadena = CambiaLtr123(sCadena, cChr, "");
+
+            cChr = Convert.ToChar(13).ToString();
+            sCadena = CambiaLtr123(sCadena, cChr, "");
+
+            cChr = Convert.ToChar(10).ToString();
+            sCadena = CambiaLtr123(sCadena, cChr, "");
+
+            return sCadena;
+        }
+
+
         public static string ReplaceDoubleSpaces(string texto)
         {
             return Regex.Replace(texto, @"\s+", " ");

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KellermanSoftware.CompareNetObjects;
+using System;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -118,8 +119,36 @@ namespace ScjnUtilities
             Regex regex = new Regex(@"[A-Z]{4}\d{6}[HM][A-Z]{2}[B-DF-HJ-NP-TV-Z]{3}[A-Z0-9][0-9]");
             return regex.IsMatch(curp);
         }
-       
 
+        /// <summary>
+        /// Agrega las propiedades que se deben de excluir de la comparasión que se realizará entre dos objetos
+        /// </summary>
+        /// <param name="compareLogic">Objeto que se configura para realizar comparación</param>
+        /// <param name="excludedProperties">Propiedades que se habrán de excluir al momento de comparar</param>
+        /// <returns></returns>
+        public static CompareLogic IsEqualObjectExclusion(CompareLogic compareLogic, string[] excludedProperties)
+        {
+            foreach (string property in excludedProperties)
+                compareLogic.Config.MembersToIgnore.Add(property);
+
+            return compareLogic;
+        }
+
+        /// <summary>
+        /// Agerga las propiedades que se deben de incluir durante la comparasión que se realizará de dos objetos
+        /// Documentación
+        /// https://github.com/GregFinzer/Compare-Net-Objects/wiki/Getting-Started
+        /// </summary>
+        /// <param name="compareLogic">Objeto que se configura para realizar comparación</param>
+        /// <param name="includedProperties">Propiedades que se habrán de incluir al momento de comparar</param>
+        /// <returns></returns>
+        public static CompareLogic IsEqualObjectInclusion(CompareLogic compareLogic, string[] includedProperties)
+        {
+            foreach (string property in includedProperties)
+                compareLogic.Config.MembersToInclude.Add(property);
+
+            return compareLogic;
+        }
 
     }
 }

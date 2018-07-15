@@ -8,3 +8,5 @@ C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\bin\Debug\ScjnUtiliti
 C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.csprojResolveAssemblyReference.cache
 C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.dll
 C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\obj\Debug\ScjnUtilities.pdb
+C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\bin\Debug\KellermanSoftware.Compare-NET-Objects.dll
+C:\Users\Luis\Documents\GitHub\ScjnUtilities\ScjnUtilities\bin\Debug\KellermanSoftware.Compare-NET-Objects.xml
